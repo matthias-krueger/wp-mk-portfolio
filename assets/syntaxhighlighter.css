@@ -1,0 +1,186 @@
+/* 2 TYPOGRAPHY
+--------------------------------------------------------*/
+
+@font-face {
+    font-family: sourcecode;
+	font-style: normal;
+	font-weight: 400;
+    src: local('Source Code Pro'), local('SourceCodePro-Regular'),
+		url('../fonts/SourceCodePro.woff2') format('woff2'),
+		url('../fonts/SourceCodePro.woff') format('woff');
+}
+
+pre, pre code, pre a, pre textarea {
+    font-family: sourcecode, monospace;
+	font-size: 0.7rem;
+	line-height: 1rem;
+}
+
+.inlineCode {
+    font-family: sourcecode, monospace;
+	font-size: 0.8rem;
+	letter-spacing: -0.02rem;
+	padding:  0.1rem 0.2rem;
+	border-radius: 0.1rem;
+	vertical-align: top;
+	background-color: #eee;
+}
+
+pre.js .langIcon:before {content: 'js();';}
+pre.css .langIcon:before {content: '.css{}';}
+pre.php .langIcon:before {content: '<?php>';}
+pre.html .langIcon:before {content: '</html>';}
+
+pre .langIcon {
+	position: absolute;
+	color: red;
+	top: 0;
+	left: 1rem;
+}
+
+
+/* 2 LAYOUT
+--------------------------------------------------------*/
+
+pre {
+	width: 100%;
+	margin: 1rem 0;
+	padding: 1rem 0;
+	position: relative;
+	overflow: auto;
+	background-color: #212226;
+}
+
+pre .table {
+	display: table;
+}
+
+pre .code {
+	width: 100%;
+}
+
+pre .gutter,
+pre .code {
+	display: table-cell;
+}
+
+pre.source .gutter,
+pre.source .langIcon {
+	display: none;
+}
+
+pre.nogutter .code textarea,
+pre.nogutter .code .line {
+	padding-left: 1rem;
+}
+
+pre .gutter {
+	color: #888;
+}
+
+pre .gutter .line {
+	margin-left: 0.4rem;
+	padding-right: 0.3rem;
+	padding-left: 0.3rem;
+	border-right: 0.1rem solid #777;
+	text-align: right;
+}
+
+pre .gutter .highlighted {
+	color: #eee;
+}
+
+pre .highlighted {
+	background-color: #545d6d;
+}
+
+pre .code .line {
+	padding-left: 0.7rem;
+	padding-right: 0.3rem;
+	margin-right: 0.4rem;
+}
+
+pre .container {
+	position: relative;
+}
+
+pre .code textarea {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding-left: 0.5rem;
+	resize: none;
+	background-color: #212226;
+	color: #eee;
+}
+
+pre.ie {
+	font-size: .9em;
+	padding: 1px 0 1px 0;
+}
+
+pre .plain, pre .plain a {
+	color: #eee;
+}
+
+pre .comments, pre .comments a {
+	color: #888;
+}
+
+pre .string, pre .string a {
+	color: #d89333;
+}
+
+pre .keyword {
+	color: #6c9ef8;
+}
+
+pre .preprocessor {
+	color: gray;
+}
+
+pre .variable {
+	color: #eee;
+}
+
+pre .value {
+	color: #85a300;
+}
+
+pre .functions {
+	color: #b77fdb;
+}
+
+pre .constants {
+	color: #0066cc;
+}
+
+pre .script {
+	color: #6c9ef8;
+}
+
+pre .color1, pre .color1 a {
+	color: #85a300;
+}
+
+pre .color2, pre .color2 a {
+	color: #b77fdb;
+}
+
+pre .color3, pre .color3 a {
+	color: red;
+}
+
+/* 3 PRINT
+--------------------------------------------------------*/
+
+@media print {
+	
+	pre {
+		white-space: normal;
+        page-break-before: always;
+		background-color: #eee;
+	}
+}

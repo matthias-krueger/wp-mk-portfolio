@@ -1,0 +1,1 @@
+<h2>No articles were found.</h2>
