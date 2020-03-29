@@ -24,19 +24,19 @@
 		</aside>
 		<section class="content wrapper">
 			<?php the_content(); ?>
+			<div class="pagination">
+				<?php
+					the_post_navigation( array(
+						'prev_text'			=> '&laquo; Previous Episode',
+						'next_text'         => 'Next Episode &raquo;',
+						'in_same_term'      => true,
+						'taxonomy'          => 'series',
+						'screen_reader_text'=> 'Series navigation',
+					) );
+				?>
+			</div>
 		</section>
 		<?php comments_template(); ?>
-		<div class="pagination">
-			<?php
-				the_post_navigation( array(
-					'prev_text'			=> '&laquo; Previous Episode',
-					'next_text'         => 'Next Episode &raquo;',
-					'in_same_term'      => true,
-					'taxonomy'          => 'series',
-					'screen_reader_text'=> 'Series navigation',
-				) );
-			?>
-		</div>
 	</article>
 </main>
 <?php get_footer(); ?>

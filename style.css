@@ -1,9 +1,9 @@
 /*
-Theme Name: Portfolio
+Theme Name: MK Portfolio
 Author: Matthias Krueger
 Author URI: http://matthiaskrueger.info
 Description: Portfolio Theme
-Version: 1.0
+Version: 1.1
 Tags: custom-menu
 */
 
@@ -76,7 +76,7 @@ span {
     letter-spacing: normal;
 }
 
-body, textarea, button, input {
+body, textarea, button, input, time {
     font-family: pavanam, verdana, arial, sans-serif;
     color: #444;
 }
@@ -115,10 +115,20 @@ p {
 	line-height: 1.3rem;
 }
 
+time {
+	font-size: .8rem;
+	margin: 0.5rem 0;
+	line-height: 1.3rem;
+}
+
 a, textarea, input, button {
     text-decoration: none;
     background-color: transparent;
 	font-size: 1rem;
+}
+
+a {
+	text-decoration: underline;
 }
 
 q {
@@ -205,20 +215,15 @@ aside,
 .wrapper {
 	width: 90%;
 	margin: 0 auto;
-	max-width: 60rem;
+	max-width: 45rem;
 }
 
-.single .wrapper,
-.legal .wrapper {
-	max-width: 50rem;
+.content .wrapper {
+	max-width: 35rem;
 }
 
 .content {
 	padding: 2rem 0;
-}
-
-.home .content {
-	padding: 0;
 }
 
 a {
@@ -232,7 +237,13 @@ a {
 }
 
 a:focus,
-a:hover,
+a:hover {
+	color: #f74a55;
+	text-decoration-thickness: .07rem;
+}
+
+.siteHeader a:focus,
+.siteHeader a:hover,
 #searchButton:focus,
 #searchButton:hover,
 .search #searchButton:focus,
@@ -247,41 +258,46 @@ a:hover,
 	color: #fff;
 }
 
-.single .content a:focus,
-.single .content a:hover {
-	background-color: transparent;
-	color: #f74a55;
-}
-
 .current-cat a,
 .currentSeriesItem a {
-    background-color: #c7ced1;
+	text-decoration-thickness: .07rem;
+}
+
+.currentSeriesItem .icon {
+	visibility: hidden;
 }
 
 .current-cat a:focus,
 .current-cat a:hover,
 .currentSeriesItem a:focus,
 .currentSeriesItem a:hover {
-    background-color: #d5dadc;
-	color: #615393;
+	color: #d5dadc;
 }
 
-.current-menu-item a,
+.siteHeader .current-menu-item a,
 .search #searchButton {
 	background-color: #241f37;
 	color: #fff;
 }
 
-.current-menu-item a:focus,
-.current-menu-item a:hover {
+.siteHeader .current-menu-item a:focus,
+.siteHeader .current-menu-item a:hover {
 	background-color: #312a4b;
 	color: #d5dadc;
 }
 
+.siteFooter .current-menu-item a{
+	text-decoration-thickness: .07rem;
+}
+
+.siteFooter .current-menu-item a:focus,
+.siteFooter .current-menu-item a:hover {
+	color: #d5dadc;
+}
+
 .pagination {
-	padding: 1rem 0;
+	margin-top: 2rem;
 	text-align: center;
-	background-color: #eceeef;
 }
 
 .pagination a {
@@ -311,6 +327,10 @@ a:hover,
 	padding: 1rem 0;
 	width: 100%;
 	z-index: 30;
+}
+
+.siteHeader a {
+	text-decoration: none;
 }
 
 .navHeader {
@@ -499,6 +519,29 @@ a:hover,
 	margin-left: 5em;
 }
 
+
+/* content
+--------------------------------------------------------*/
+
+.content article p {
+	margin: 0;
+}
+
+.home .content h3 a,
+.postList .content h2 a {
+	font-size: 1.2rem;
+}
+
+.home .content h3,
+.postList .content h2 {
+	margin-bottom: 0;
+}
+
+.home h3:hover {
+	color: #f74a55;
+}
+
+
 /* front page
 --------------------------------------------------------*/
 
@@ -512,6 +555,12 @@ a:hover,
 	-webkit-box-align: stretch;
 	align-items: stretch;
 	margin-bottom: 15vh;
+}
+
+.claim {
+	text-align: center;
+	padding-bottom: 2rem;
+	font-size: 1.1rem;
 }
 
 .homeHci {
@@ -626,6 +675,10 @@ a:hover,
 	font-size: 1.1rem;
 }
 
+.home h2 {
+	text-align: center;
+}
+
 
 /* about
 --------------------------------------------------------*/
@@ -699,10 +752,6 @@ a:hover,
 	margin: .2rem 0;
 }
 
-.single .content a {
-	text-decoration: underline;
-}
-
 .single .content ol {
 	margin-top: -.3rem;
 	margin-left: 1rem;
@@ -767,14 +816,15 @@ a:hover,
 
 .asideSeries {
 	display: inline-block;
-	background-color: #eceeef;
-	margin-top: 2rem;
-	padding: 1rem;
+	/* background-color: #eceeef; */
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+	/* padding: 1rem; */
 }
 
 .asideSeries p {
 	margin-top: 0;
-	margin-bottom: .8rem;
+	margin-bottom: .4rem;
 	font-size: 1.1rem;
 }
 
@@ -800,7 +850,7 @@ a:hover,
 /* posts lists
 --------------------------------------------------------*/
 
-.postList .content {
+/* .postList .content {
 	background-color: #eceeef;
 }
 
@@ -850,7 +900,7 @@ a:hover,
 	font-size: .9rem;
 	margin-top: .5rem;
 	color: #777;
-}
+} */
 
 
 /* media
@@ -952,12 +1002,7 @@ figcaption,
 --------------------------------------------------------*/
 
 .commentBox {
-	margin-top: 1rem;
 	padding-bottom: 2rem;
-}
-
-.commentBox .wrapper {
-	border-top: 0.1rem solid #eceeef;
 }
 
 .commentList ol {
@@ -1082,9 +1127,10 @@ figcaption,
 --------------------------------------------------------*/
 
 .siteFooter {
-	background-color: #383055;
     text-align: center;
-	padding: 2rem .8rem;
+	padding: .8rem;
+	margin-top: 2rem;
+	border-top: 1px solid #eceeef;
 }
 
 .siteFooter p {
@@ -1102,12 +1148,11 @@ figcaption,
 
 .siteFooter a {
 	padding: .2rem .5rem .1rem;
-	text-transform: uppercase;
 }
 
 .siteFooter p,
 .siteFooter a {
-	color: #fff;
+	/* color: #fff; */
 	font-size: 0.9rem;
 }
 
@@ -1230,7 +1275,7 @@ figcaption,
 	.home .iconLogo {
 		font-size: 5rem;
 	}
-
+/* 
 	.postList article {
 		-webkit-box-flex: 0;
 		flex: 0 1 auto;
@@ -1246,7 +1291,7 @@ figcaption,
 		-webkit-box-orient: horizontal;
   		-webkit-box-direction: normal;
 		flex-direction: row;
-	}
+	} */
 	
 	.about .aboutMe .textBox {
 		width: 60%;

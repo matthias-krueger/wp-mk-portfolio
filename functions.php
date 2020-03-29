@@ -118,7 +118,7 @@ function mki_series_parts() {
 	if ( $postTerms && !is_wp_error( $postTerms ) ) {
 		$output = '<div class="wrapper"><div class="asideSeries menu">';
 		foreach ( $postTerms as $postTerm ) {
-			$output .= '<p>This article ist part of the ' . esc_html( $postTerm->name ) . ' series</p><ol>';
+			$output .= '<p>This article ist part of the ' . esc_html( $postTerm->name ) . ' series:</p><ol>';
 			$postQuery = new WP_Query(
 				array(
 					'order'   	=> 'ASC',
