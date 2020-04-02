@@ -44,8 +44,7 @@ span {
 
 @font-face {
     font-family: icomoon;
-    src: url("fonts/icomoon.woff2") format("woff2"),
-        url("fonts/icomoon.ttf") format("truetype");
+    src: url("fonts/icomoon.woff") format("woff");
 }
 
 @font-face {
@@ -73,10 +72,10 @@ span {
 	speak: none;
 	text-decoration: none;
 	text-transform: none;
-    letter-spacing: normal;
+	letter-spacing: normal;
 }
 
-body, textarea, button, input, time {
+body, textarea, button, input, .content time {
     font-family: pavanam, verdana, arial, sans-serif;
     color: #444;
 }
@@ -145,11 +144,10 @@ ul, ol, li {
     list-style-type: none;
 }
 
-.iconLogo:before {content: "\e100";}
+.iconGit:before {content: "\e100";}
+.iconLinked:before {content: "\e110";}
 .iconSearch:before {content: "\e200";}
 .iconLink:before {content: "\e300";}
-.iconBack:before {content: "\e400";}
-
 
 /* 3 ACCESSIBILITY
 --------------------------------------------------------*/
@@ -264,7 +262,7 @@ a:hover {
 }
 
 .currentSeriesItem .icon {
-	visibility: hidden;
+	opacity: .5;
 }
 
 .current-cat a:focus,
@@ -335,10 +333,12 @@ a:hover {
 
 .navHeader {
 	text-align: center;
+	width: 100%;
 }
 
-#menuHeader,
-#menuHeader li,
+.navHeader,
+.navHeader ul,
+.navHeader li,
 #searchButton {
 	display: inline-block;
 }
@@ -623,13 +623,6 @@ a:hover {
 	padding-left: 1.6rem;
 	padding-right: .5rem;
 	margin: 0;
-}
-
-.home .iconLink {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	margin-left: -1.3rem;
 }
 
 .homeHci .linkItem {

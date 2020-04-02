@@ -22,7 +22,17 @@
 					'menu_id' => 'menuHeader',
 				) );
 			?>
-			<button id="searchButton" tabindex="0">Search</button>
+			<ul>
+				<li>
+					<button id="searchButton" title="Search" tabindex="0">Search</button>
+				</li>
+				<li>
+					<a href="https://www.github.com/matthias-krueger" title="GitHub" tabindex="0"><span class="icon iconGit"></span></a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/in/krueger-matthias/" title="LinkedIn" tabindex="0"><span class="icon iconLinked"></span></a>
+				</li>
+			</ul>
 		</nav>
 		<?php get_search_form(); ?>
     </header>
