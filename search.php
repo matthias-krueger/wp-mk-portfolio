@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="pageMain" role="main">
+<main id="pageMain">
 	<section id="intro">
 		<div class="table wrapper">
 			<div class="tableCell">

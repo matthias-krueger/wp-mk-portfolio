@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="pageMain" role="main">
+<main id="pageMain">
 	<?php the_post(); ?>
 	<article <?php post_class(); ?>>
 		<section id="intro">

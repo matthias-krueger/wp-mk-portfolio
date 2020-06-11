@@ -259,6 +259,7 @@ a:hover {
 .current-cat a,
 .currentSeriesItem a {
 	text-decoration-thickness: .07rem;
+	color: #f74a55;
 }
 
 .currentSeriesItem .icon {
@@ -269,7 +270,7 @@ a:hover {
 .current-cat a:hover,
 .currentSeriesItem a:focus,
 .currentSeriesItem a:hover {
-	color: #d5dadc;
+	color: #a69dc8;
 }
 
 .siteHeader .current-menu-item a,
@@ -281,7 +282,7 @@ a:hover {
 .siteHeader .current-menu-item a:focus,
 .siteHeader .current-menu-item a:hover {
 	background-color: #312a4b;
-	color: #d5dadc;
+	color: #a69dc8;
 }
 
 .siteFooter .current-menu-item a{
@@ -290,7 +291,7 @@ a:hover {
 
 .siteFooter .current-menu-item a:focus,
 .siteFooter .current-menu-item a:hover {
-	color: #d5dadc;
+	color: #a69dc8;
 }
 
 .pagination {
@@ -728,16 +729,23 @@ a:hover {
 .single .content h3,
 .single .content h4 {
 	font-weight: 600;
+	margin-bottom: 0;
 }
 
-.single .content h3,
-.single .content h4 {
-	padding-left: .5rem;
-	border-left: .1rem solid #d5dadc;
+.single .content h2 {
+	margin-top: 3rem;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+}
+
+.single .content h3 {
+	margin-top: 1.5rem;
+	font-size: 1.2rem;
 }
 
 .single .content h4 {
-	border-left-width: .2rem;
+	margin-top: 1rem;
+	font-size: 1rem;
 }
 
 .single .content li {
@@ -786,18 +794,23 @@ a:hover {
 /* aside
 --------------------------------------------------------*/
 
+.blog .content,
+.archive .content {
+	padding-top: 0;
+}
+
+
 .asideCategory {
-	padding: 1.2rem 0;
+	margin-top: 3rem;
 	text-align: center;
-	background-color: #eceeef;
 }
 
-.asideCategory p {
+.asideCategory h2 {
+	font-size: 1.2rem;
 	margin: 0;
-	padding: 0 .5rem;
+	padding: .2rem;
 }
 
-.asideCategory p,
 .asideCategory ul,
 .asideCategory li {
 	display: inline-block;
@@ -825,18 +838,22 @@ a:hover {
 	margin-top: .1rem;
 }
 
-.asideSeries a {
+/* .asideSeries a {
 	position: relative;
 	padding-left: 1.6rem;
 	padding-right: .3rem;
-}
+} */
 
-.asideSeries .iconLink {
+/* .asideSeries .iconLink {
 	position: absolute;
 	padding-left: .3rem;
 	top: .15rem;
 	bottom: 0;
 	left: 0;
+} */
+
+.asideSeries .iconLink {
+	display: none;
 }
 
 

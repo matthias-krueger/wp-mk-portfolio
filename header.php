@@ -11,9 +11,9 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-    <header class="siteHeader" role="banner">
+    <header class="siteHeader">
 		<a class="skipLink screen-reader-text" href="#pageMain" tabindex="0">Skip to main content</a>
-		<nav class="navHeader" role="navigation">
+		<nav class="navHeader">
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'nav_header',

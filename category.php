@@ -5,13 +5,14 @@
 			<div class="tableCell">
 				<div class="headingBox">
 					<h1 class="heading">
-						<small>All</small><br><span class="name">Articles</span>
+						<small>Category</small><br><span class="name"><?php single_cat_title(); ?></span>
 					</h1>
 					<div class="headingMore">
 						<p>
-							<?php
-								$postCount = wp_count_posts();
-								echo $postCount->publish . ' postings';
+                            <?php
+                                foreach ( get_the_terms( get_the_ID(), 'category' ) as $term ) {
+                                    echo $term->count . ' postings';
+                                }
 							?>
 						</p>
 					</div>
@@ -39,7 +40,7 @@
     </aside>
 	<section class="content">
 		<div class="wrapper">
-			<?php			
+			<?php
 				if (have_posts()) {
 					while (have_posts()) {
 						the_post();
